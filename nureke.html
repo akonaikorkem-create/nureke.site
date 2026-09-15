@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Пікір қалдыру | Тлеуқабыл Нұрболат</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: 'Montserrat', sans-serif;
+
+    color: #123b63;
+
+    background:
+        radial-gradient(circle at 10% 10%, #ffffff 0, transparent 25%),
+        radial-gradient(circle at 90% 90%, #bde7ff 0, transparent 30%),
+        linear-gradient(135deg, #dff4ff, #a9dcfa);
+
+    padding: 25px 15px;
+}
+
+
+/* ФОННЫҢ ӘДЕМІ ЭЛЕМЕНТТЕРІ */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    width: 250px;
+    height: 250px;
+
+    background: rgba(255,255,255,.25);
+
+    border-radius: 50%;
+
+    top: -80px;
+    left: -70px;
+
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+
+    position: fixed;
+
+    width: 300px;
+    height: 300px;
+
+    background: rgba(30,150,230,.12);
+
+    border-radius: 50%;
+
+    right: -100px;
+    bottom: -100px;
+
+    z-index: -1;
+}
+
+
+.wrapper {
+    max-width: 920px;
+
+    margin: auto;
+}
+
+
+/* =========================================
+   ЛОГОТИП
+   ========================================= */
+
+.logo-area {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.logo {
+
+    width: 145px;
+    height: 145px;
+
+    object-fit: contain;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow:
+        0 12px 35px rgba(0,90,150,.22);
+
+    border: 5px solid white;
+
+    animation: logoIn .8s ease;
+
+}
+
+
+@keyframes logoIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(.8);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+.logo-name {
+
+    margin-top: 12px;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    color: #073b70;
+
+}
+
+
+.logo-subtitle {
+
+    color: #2380b9;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    margin-top: 5px;
+
+}
+
+
+/* =========================================
+   НЕГІЗГІ КАРТОЧКА
+   ========================================= */
+
+.card {
+
+    background: rgba(255,255,255,.94);
+
+    border-radius: 30px;
+
+    padding: 42px;
+
+    box-shadow:
+        0 20px 60px rgba(0,91,150,.18);
+
+    border:
+        1px solid rgba(255,255,255,.9);
+
+    backdrop-filter: blur(10px);
+
+    animation: cardIn .7s ease;
+
+}
+
+
+@keyframes cardIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =========================================
+   БЕТТЕР
+   ========================================= */
+
+.page {
+
+    display: none;
+
+}
+
+
+.page.active {
+
+    display: block;
+
+    animation: pageIn .5s ease;
+
+}
+
+
+@keyframes pageIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateX(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateX(0);
+
+    }
+
+}
+
+
+/* =========================================
+   БЕЛГІ
+   ========================================= */
+
+.badge {
+
+    width: fit-content;
+
+    margin: 0 auto 15px;
+
+    padding: 9px 20px;
+
+    background: #e1f4ff;
+
+    border: 1px solid #b7e5ff;
+
+    border-radius: 50px;
+
+    color: #0878bd;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================================
+   ТАҚЫРЫП
+   ========================================= */
+
+h1 {
+
+    text-align: center;
+
+    margin: 0;
+
+    font-family: 'Playfair Display', serif;
+
+    color: #073b70;
+
+    font-size: 38px;
+
+}
+
+
+.subtitle {
+
+    text-align: center;
+
+    color: #6b8297;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+
+    margin: 15px auto 32px;
+
+    max-width: 600px;
+
+}
+
+
+/* =========================================
+   ФОРМА
+   ========================================= */
+
+.form-group {
+
+    margin-bottom: 20px;
+
+}
+
+
+label {
+
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #17466d;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+}
+
+
+input,
+textarea {
+
+    width: 100%;
+
+    border: 2px solid #d5efff;
+
+    border-radius: 15px;
+
+    background: #f8fcff;
+
+    padding: 16px 18px;
+
+    color: #164b70;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: .25s;
+
+}
+
+
+input:focus,
+textarea:focus {
+
+    border-color: #43b8f3;
+
+    background: #fff;
+
+    box-shadow:
+        0 0 0 4px rgba(67,184,243,.12);
+
+}
+
+
+textarea {
+
+    min-height: 210px;
+
+    resize: vertical;
+
+}
+
+
+input::placeholder,
+textarea::placeholder {
+
+    color: #9bb1c3;
+
+}
+
+
+/* =========================================
+   БАТЫРМА
+   ========================================= */
+
+.btn {
+
+    width: 100%;
+
+    border: none;
+
+    padding: 17px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(135deg,#087fd0,#31b5f4);
+
+    color: white;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(0,125,205,.25);
+
+    transition: .25s;
+
+}
+
+
+.btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 30px rgba(0,125,205,.35);
+
+}
+
+
+.btn:active {
+
+    transform: scale(.98);
+
+}
+
+
+.btn:disabled {
+
+    opacity: .6;
+
+    cursor: wait;
+
+    transform: none;
+
+}
+
+
+/* =========================================
+   ТАҚЫРЫП КАРТОЧКАСЫ
+   ========================================= */
+
+.topic-card {
+
+    margin: 30px 0;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(135deg,#effaff,#e0f5ff);
+
+    border: 1px solid #c5ebff;
+
+    border-radius: 22px;
+
+}
+
+
+.presenter {
+
+    text-align: center;
+
+    font-family: 'Playfair Display', serif;
+
+    color: #07548a;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+
+}
+
+
+.line {
+
+    width: 65px;
+
+    height: 3px;
+
+    background: #31b5f4;
+
+    border-radius: 10px;
+
+    margin: 0 auto 22px;
+
+}
+
+
+.topic-label {
+
+    text-align: center;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+
+    color: #5591b5;
+
+    margin-bottom: 12px;
+
+}
+
+
+.topic {
+
+    text-align: center;
+
+    color: #164b70;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================
+   СӘТТІ ЖІБЕРІЛДІ
+   ========================================= */
+
+.success {
+
+    display: none;
+
+    margin-top: 20px;
+
+    padding: 18px;
+
+    border-radius: 15px;
+
+    background: #e9fff7;
+
+    border: 1px solid #a7ecd7;
+
+    color: #087d65;
+
+    text-align: center;
+
+    font-weight: 700;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.footer {
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: #8aa5b8;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================
+   ТЕЛЕФОН
+   ========================================= */
+
+@media(max-width:600px) {
+
+    body {
+
+        padding: 15px 10px;
+
+    }
+
+
+    .card {
+
+        padding: 25px 18px;
+
+        border-radius: 23px;
+
+    }
+
+
+    .logo {
+
+        width: 115px;
+
+        height: 115px;
+
+    }
+
+
+    .logo-name {
+
+        font-size: 21px;
+
+    }
+
+
+    h1 {
+
+        font-size: 29px;
+
+    }
+
+
+    .topic-card {
+
+        padding: 20px 15px;
+
+    }
+
+
+    .presenter {
+
+        font-size: 23px;
+
+    }
+
+
+    .topic {
+
+        font-size: 14px;
+
+        line-height: 1.7;
+
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<div class="wrapper">
+
+
+<!-- =========================================
+     САЙТТЫҢ ЕҢ ЖОҒАРҒЫ ЛОГОТИПІ
+     ========================================= -->
+
+<div class="logo-area">
+
+    <img
+        src="logo.jpg"
+        class="logo"
+        alt="Тлеуқабыл Нұрболат"
+    >
+
+    <div class="logo-name">
+        Тлеуқабыл Нұрболат
+    </div>
+
+    <div class="logo-subtitle">
+        МҰҒАЛІМ • ШЫҒАРМАШЫЛ • БОЛАШАҚҚА БАҒЫТ БЕРЕТІН
+    </div>
+
+</div>
+
+
+
+<div class="card">
+
+
+<!-- =========================================
+     1-БЕТ
+     ========================================= -->
+
+<div id="page1" class="page active">
+
+
+    <div class="badge">
+        ✦ КЕРІ БАЙЛАНЫС ✦
+    </div>
+
+
+    <h1>
+        Пікір қалдырыңыз
+    </h1>
+
+
+    <p class="subtitle">
+
+        Тренинг туралы өз ойыңызбен бөлісіңіз.
+        <br>
+
+        Сіздің пікіріңіз біз үшін өте маңызды!
+
+    </p>
+
+
+
+    <div class="form-group">
+
+        <label>
+            🏫 Мектептің атауы
+        </label>
+
+        <input
+            type="text"
+            id="school"
+            placeholder="Мектеп атауын жазыңыз"
+        >
+
+    </div>
+
+
+
+    <div class="form-group">
+
+        <label>
+            👤 Аты-жөніңіз
+        </label>
+
+        <input
+            type="text"
+            id="teacher"
+            placeholder="Аты-жөніңізді жазыңыз"
+        >
+
+    </div>
+
+
+
+    <div class="form-group">
+
+        <label>
+            📚 Пәніңіз
+        </label>
+
+        <input
+            type="text"
+            id="subject"
+            placeholder="Пәніңізді жазыңыз"
+        >
+
+    </div>
+
+
+
+    <button
+        class="btn"
+        onclick="nextPage()"
+    >
+
+        Пікір қалдыру&nbsp; →
+
+    </button>
+
+
+
+    <div class="footer">
+
+        💙 Сіздің ойыңыз біз үшін маңызды
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =========================================
+     2-БЕТ
+     ========================================= -->
+
+<div id="page2" class="page">
+
+
+    <div class="badge">
+        ✦ ТРЕНИНГ ТУРАЛЫ ✦
+    </div>
+
+
+    <h1>
+        Өз пікіріңізді жазыңыз
+    </h1>
+
+
+
+    <div class="topic-card">
+
+
+        <div class="presenter">
+            Тлеуқабыл Нұрболат
+        </div>
+
+
+        <div class="line"></div>
+
+
+        <div class="topic-label">
+            ТРЕНИНГ ТАҚЫРЫБЫ
+        </div>
+
+
+        <div class="topic">
+
+            БАСТАУЫШ СЫНЫПТАРДА<br>
+
+            «ЦИФРЛЫҚ САУАТТЫЛЫҚ ЖӘНЕ
+            ЖАСАНДЫ ИНТЕЛЛЕКТ»<br>
+
+            ПӘНІН ОҚЫТУДЫҢ ТИІМДІ
+            ӘДІСТЕРІ МЕН<br>
+
+            ПРАКТИКАЛЫҚ ТӘСІЛДЕРІ
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="form-group">
+
+        <label>
+            💬 Тренинг туралы пікіріңіз
+        </label>
+
+
+        <textarea
+            id="feedback"
+            placeholder="Тренинг туралы өз пікіріңізді осында жазыңыз..."
+        ></textarea>
+
+    </div>
+
+
+
+    <button
+        class="btn"
+        id="sendButton"
+        onclick="sendFeedback()"
+    >
+
+        ✈ Пікірді жіберу
+
+    </button>
+
+
+
+    <div
+        id="success"
+        class="success"
+    >
+
+        ✓ Пікіріңіз сәтті қабылданды!<br>
+
+        Пікір қалдырғаныңызға рақмет! 💙
+
+    </div>
+
+
+
+    <div class="footer">
+
+        Тлеуқабыл Нұрболат • 2026
+
+    </div>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<script>
+
+
+/* =========================================
+   GOOGLE APPS SCRIPT СІЛТЕМЕСІ
+   ========================================= */
+
+const scriptURL =
+"https://script.google.com/macros/s/AKfycbxWDSFrbW8pjgv4cDg8lI_vdP5akO30G3hWSgWpPXd3O_I9y-KT3gS3w_trio8WsPR3/exec";
+
+
+
+/* =========================================
+   1-БЕТТЕН 2-БЕТКЕ ӨТУ
+   ========================================= */
+
+function nextPage() {
+
+
+    const school =
+        document
+        .getElementById("school")
+        .value
+        .trim();
+
+
+    const teacher =
+        document
+        .getElementById("teacher")
+        .value
+        .trim();
+
+
+    const subject =
+        document
+        .getElementById("subject")
+        .value
+        .trim();
+
+
+
+    if (!school || !teacher || !subject) {
+
+        alert(
+            "Мектеп атауын, аты-жөніңізді және пәніңізді толтырыңыз!"
+        );
+
+        return;
+
+    }
+
+
+
+    localStorage.setItem(
+        "school",
+        school
+    );
+
+
+    localStorage.setItem(
+        "teacher",
+        teacher
+    );
+
+
+    localStorage.setItem(
+        "subject",
+        subject
+    );
+
+
+
+    document
+        .getElementById("page1")
+        .classList
+        .remove("active");
+
+
+
+    document
+        .getElementById("page2")
+        .classList
+        .add("active");
+
+
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+}
+
+
+
+/* =========================================
+   ПІКІРДІ GOOGLE SHEETS-КЕ ЖІБЕРУ
+   ========================================= */
+
+function sendFeedback() {
+
+
+    const feedback =
+        document
+        .getElementById("feedback")
+        .value
+        .trim();
+
+
+
+    if (!feedback) {
+
+        alert(
+            "Пікіріңізді жазыңыз!"
+        );
+
+        return;
+
+    }
+
+
+
+    const school =
+        localStorage.getItem("school");
+
+
+    const teacher =
+        localStorage.getItem("teacher");
+
+
+    const subject =
+        localStorage.getItem("subject");
+
+
+
+    const button =
+        document
+        .getElementById("sendButton");
+
+
+
+    button.disabled = true;
+
+    button.innerText =
+        "Жіберілуде...";
+
+
+
+    const data = {
+
+        school: school,
+
+        teacher: teacher,
+
+        subject: subject,
+
+        feedback: feedback
+
+    };
+
+
+
+    fetch(scriptURL, {
+
+        method: "POST",
+
+        mode: "no-cors",
+
+        headers: {
+
+            "Content-Type":
+            "application/json"
+
+        },
+
+        body: JSON.stringify(data)
+
+    })
+
+
+    .then(function() {
+
+
+        document
+            .getElementById("success")
+            .style
+            .display = "block";
+
+
+
+        document
+            .getElementById("feedback")
+            .value = "";
+
+
+
+        button.disabled = false;
+
+
+        button.innerText =
+            "✓ Пікір жіберілді";
+
+    })
+
+
+    .catch(function(error) {
+
+
+        console.log(error);
+
+
+        alert(
+            "Пікір жіберу кезінде қате пайда болды."
+        );
+
+
+
+        button.disabled = false;
+
+
+        button.innerText =
+            "✈ Пікірді жіберу";
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
